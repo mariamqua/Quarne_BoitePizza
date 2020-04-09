@@ -114,7 +114,10 @@ class ClientCrudController extends CrudController
             'label' => "Image",
             'name' => "imgPath",
             'type' => 'text',
-            
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true, // set to true to allow cropping, false to disable
+            'aspect_ratio' => 1
         ]);
     }
 
@@ -131,7 +134,7 @@ class ClientCrudController extends CrudController
             'name' => 'imgPath',
             'type' => 'image',
             'label' => 'Image',
-            'height' => '150px'
+            'height' => '200px'
            
         ];
         $f2 = [
