@@ -98,7 +98,8 @@ class ClientCrudController extends CrudController
         $this->crud->addField([
             'name' => 'motdepasse',
             'type' => 'text',
-            'label' => "Mot de passe "
+            'label' => "Mot de passe ",
+            
         ]);
         $this->crud->addField([
             'name' => 'admin',
