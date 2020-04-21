@@ -88,7 +88,7 @@ class ClientCrudController extends CrudController
         $this->crud->addField([
             'name' => 'ca',
             'type' => 'text',
-            'label' => 'Ca'
+            'label' => "Chiffre d'affaire"
         ]);
         $this->crud->addField([
             'name' => 'login',
@@ -106,11 +106,7 @@ class ClientCrudController extends CrudController
             'type' => 'text',
             'label' => "Admin"
         ]);
-        $this->crud->addField([
-            'name' => 'date_inscr',
-            'type' => 'datetime',
-            'label' => "Date inscription"
-        ]);
+       
         $this->crud->addField([
             'label' => "Image",
             'name' => "imgPath",

@@ -69,7 +69,7 @@ class ProduitCrudController extends CrudController
         $this->crud->addField('prix');
         $this->crud->addField('remise');
         $this->crud->addField([  // Select
-            'label' => "Categorie",
+            'label' => "Catégorie",
             'type' => 'select',
             'name' => 'category_id', 
             'entity' => 'category', 

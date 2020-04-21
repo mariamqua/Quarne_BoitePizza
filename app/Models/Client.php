@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Hash;
 
 class Client extends Model
 {
@@ -29,8 +32,12 @@ class Client extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function setImageAttribute($value)
-    {
+    public function setMotdepasseAttribute($value) {
+        $this->attributes['motdepasse'] = Hash::make($value);
+    }
+
+    public function setImageAttribute($value){
+
         $attribute_name = "image";
         $disk = config('backpack.base.root_disk_name'); // or use your own disk, defined in config/filesystems.php
         $destination_path = "public/uploads/clientImages/"; // path relative to the disk above
@@ -56,6 +63,7 @@ class Client extends Model
             $this->attributes[$attribute_name] = $destination_path . '/' . $filename;
         }
     }
+    
     
     /*
     |--------------------------------------------------------------------------
