@@ -19,7 +19,7 @@ class CreateProduitsTable extends Migration
             $table->integer('remise');
             $table->datetime('date_debut');
             $table->datetime('date_fin');
-            $table->integer('isPromo');
+            $table->boolean('isPromo');
             $table->text('imgPath');
             $table->timestamps();
             $table->unsignedInteger('category_id');

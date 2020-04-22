@@ -103,7 +103,7 @@ class ClientCrudController extends CrudController
         ]);
         $this->crud->addField([
             'name' => 'admin',
-            'type' => 'text',
+            'type' => 'boolean',
             'label' => "Admin"
         ]);
        
@@ -145,8 +145,6 @@ class ClientCrudController extends CrudController
             'name' => 'prenom',
             'type' => 'text',
             'label' => 'Prénom',
-
-            
         ];
         $f4 = [
             'name' => 'adresse',
@@ -172,7 +170,7 @@ class ClientCrudController extends CrudController
         $f7 = [
             'name' => 'ca',
             'type' => 'text',
-            'label' => 'Ca',
+            'label' => "Chiffre d'affaire",
 
             
         ];

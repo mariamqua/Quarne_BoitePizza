@@ -30,6 +30,8 @@ class ProduitRequest extends FormRequest
             'prix' => 'required|numeric',
             'remise' => 'required|numeric',
             'isPromo' => 'required',
+            'imgPath' => 'required', 
+
         ];
     }
 
@@ -53,7 +55,14 @@ class ProduitRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'nom.required' => 'le nom du client est requis.',
+            'prix.required' => 'le prix du client est requis.',
+            'remise.required' =>"L'adresse est requis.",
+            'prix.numeric' => " Le prix doit être un nombre.",
+            'remise.numeric' => " La remise doit être un nombre.",
+            'isPromo.required' => "L'email est requis.",
+            'imgPath.required' => "L'image est requis.",
+
         ];
     }
 }

@@ -33,7 +33,7 @@ class FormuleCrudController extends CrudController
             'name' => 'imgPath',
             'type' => 'image',
             'label' => 'Image',
-            'height' => '90px'
+            'height' => '100px'
         ];
         $f2 = [
             'name' => 'nom',
@@ -93,7 +93,7 @@ class FormuleCrudController extends CrudController
         $f1 = [
             'name' => 'imgPath',
             'type' => 'image',
-            'height' => '200px',
+            'height' => '240px',
             'label' => 'Image'
         ];
         $f2 = [

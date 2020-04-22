@@ -30,7 +30,8 @@ class FormuleRequest extends FormRequest
 
             'nom' => 'required|min:3|max:105',
             'prix' => 'required|numeric',
-            'description' => 'required|min:2', 
+            'description' => 'required|min:10', 
+            'imgPath' => 'required', 
         ];
     }
 
@@ -54,7 +55,13 @@ class FormuleRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'nom.required' => 'le nom du client est requis.',
+            'prix.required' => 'le prénom du client est requis.',
+            'prix.numeric' => " Le prix doit être un nombre.",
+            'description.required' =>"L'adresse est requis.",
+            'description.min' => ' description doit contenir au minimum 10 caracteres',
+            'imgPath.required' => "L'image est requis.",
+            
         ];
     }
 }

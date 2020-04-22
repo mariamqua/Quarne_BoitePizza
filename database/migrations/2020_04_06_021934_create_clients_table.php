@@ -23,7 +23,7 @@ class CreateClientsTable extends Migration
             $table->decimal('ca');
             $table->datetime('date_inscr');
             $table->string('imgPath');
-            $table->char('admin', 1);
+            $table->boolean('admin');
 
             $table->timestamps();
         });

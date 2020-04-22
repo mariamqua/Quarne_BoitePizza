@@ -52,7 +52,10 @@ class CommentaireRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'texte.required' => 'le texte du client est requis.',
+            'produit_id.required' => 'le produit est requis.',
+            'client_id.required' =>"Le client est requis.",
+            
         ];
     }
 }

@@ -54,7 +54,8 @@ class CatproduitRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'nomCat.required' => 'le nom de la catégorie est requis.',  
+            'nomCat.min' => "Le nom doit être composé d'au moins 3 caractères.",      
         ];
     }
 }

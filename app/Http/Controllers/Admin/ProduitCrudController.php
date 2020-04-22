@@ -35,7 +35,7 @@ class ProduitCrudController extends CrudController
             'name' => 'imgPath',
             'type' => 'image',
             'label' => 'Image',
-            'height' => '90px'
+            'height' => '130px'
         ];
         $f2 = [
             'name' => 'nom',
@@ -83,11 +83,18 @@ class ProduitCrudController extends CrudController
             'label' => "Date fin",
             'name' => 'date_fin',
             'type' => 'datetime']);
-        $this->crud->addField('isPromo');
         $this->crud->addField([
-            'label' => "Lien d'image",
-            'name' => 'imgPath',
-            'type' => 'textarea']);
+            'name' =>'isPromo',
+            'label' => 'En promotion',
+            'type' => 'checkbox']);
+        $this->crud->addField([
+            'label' => "Image",
+            'name' => "imgPath",
+            'type' => 'text',
+            'type' => 'image',
+            'upload' => true,
+            'crop' => true, // set to true to allow cropping, false to disable
+            'aspect_ratio' => 1]);
         // TODO: remove setFromDb() and manually define Fields
        // $this->crud->setFromDb();
     }
@@ -104,7 +111,7 @@ class ProduitCrudController extends CrudController
         $f1 = [
             'name' => 'imgPath',
             'type' => 'image',
-            'height' => '200px',
+            'height' => '3330px',
             'label' => 'Image'
         ];
         $f2 = [
@@ -139,8 +146,8 @@ class ProduitCrudController extends CrudController
         ];
         $f8 = [
             'name' => 'isPromo',
-            'type' => 'text',
-            'label' => 'isPromo',
+            'type' => 'boolean',
+            'label' => 'En promotion',
         ];
 
         $this->crud->addColumns([$f1, $f2, $f3, $f4, $f5, $f6, $f7, $f8]);

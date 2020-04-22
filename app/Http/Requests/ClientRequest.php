@@ -32,8 +32,10 @@ class ClientRequest extends FormRequest
             'prenom' => 'required|min:3|max:105',
             'adresse' => 'required|min:2|max:205',
             'email' => 'required|email',
-            'ca' => 'required',
-            'login' => 'required|min:8|max:45',
+            'admin' => 'required',
+            'imgPath' => 'required',
+            'ca' => 'numeric|required',
+            'login' => 'required|min:5|max:45',
             'motdepasse' => 'string|required|alpha_num|between:8,50',
         ];
     }
@@ -58,8 +60,23 @@ class ClientRequest extends FormRequest
     public function messages()
     {
         return [
-            //
-            'nom' => 'required|min:3|max:105',
+            'nom.required' => 'le nom du client est requis.',
+            'prenom.required' => 'le prénom du client est requis.',
+            'adresse.required' =>"L'adresse est requis.",
+            'email.required' => "L'email est requis.",
+            
+            'motdepasse.string' => ' Le mot de passe doit être une chaîne.',
+            'motdepasse.required' => ' Le mot de passe est requis.',
+            'motdepasse.between' => ' Le mot de passe doit comporter entre 8 et 50 caractères..',
+           
+            'ca.numeric' => " Le chiffre d'affaire doit être un nombre.",
+            'ca.required' => ' Le mot de passe est requis.',
+            
+            'imgPath.required' => " L'image est requis.",
+            'admin.required' => ' Le role est requis.',
+
+            'login.numeric' => " login doit contenir au minimum 5 caracteres.",
+            'login.required' => 'login est requis.',            
         ];
     }
 }
