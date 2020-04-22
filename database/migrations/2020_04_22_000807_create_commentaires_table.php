@@ -14,7 +14,13 @@ class CreateCommentairesTable extends Migration
     {
         Schema::create('commentaires', function (Blueprint $table) {
             $table->increments('id');
-            $table->string(' texte ');
+            $table->string('texte');
+            $table->datetime('date_pub')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->unsignedInteger('produit_id');
+            $table->unsignedInteger('client_id');
+            $table->foreign('produit_id')->references('id')->on('produits')->onDelete('cascade');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

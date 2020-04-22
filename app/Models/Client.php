@@ -32,6 +32,11 @@ class Client extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function CommentairesClient()
+    {
+        return $this->hasMany(Commentaire::class);
+    }
+
     public function setMotdepasseAttribute($value) {
         $this->attributes['motdepasse'] = Hash::make($value);
     }

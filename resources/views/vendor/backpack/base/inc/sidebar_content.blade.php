@@ -7,4 +7,5 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('produit') }}'><i class='nav-icon fa fa-shopping-cart'></i> Produits</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('client') }}'><i class='nav-icon fa fa-user'></i> Clients</a></li>
-<li class='nav-item'><a class='nav-link' href='{{ backpack_url('formule') }}'><i class='nav-icon fa fa-question'></i> Formules</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('formule') }}'><i class='nav-icon fa fa-tag'></i> Formules</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('commentaire') }}'><i class='nav-icon fa fa-comments'></i> Commentaires</a></li>
